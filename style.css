@@ -1,0 +1,86 @@
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #a5b1c2;
+}
+.img-slider{
+    border-radius: 20px;
+    background-color: #485460;
+}
+.container {
+    position: relative;
+    width: 360px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 10px 10px 10px #485460;
+}
+
+.radio-btn {
+    display: none;
+}
+
+.images-container {
+    display: flex;
+    width: 300%;
+}
+
+.image {
+    width: 100%;
+}
+
+.image img {
+    width: 100%;
+    object-fit: cover;
+    border: none;
+}
+
+.btn-container {
+    position: absolute;
+    bottom: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.btn {
+    display: inline-flex;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #f6b93b;
+}
+
+.radio-btn:checked+.images-container {
+    animation-play-state: paused;
+}
+
+.radio-btn:nth-child(1):checked~.images-container {
+    transform: translateX(-33.33%);
+}
+
+.radio-btn:nth-child(2):checked~.images-container {
+    transform: translateX(-66.66%);
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.btns{
+    color: aliceblue;
+    width: 50px;
+    height: 30px;
+    border-radius: 20%;
+    background-color: #000;
+    cursor: pointer;
+}
